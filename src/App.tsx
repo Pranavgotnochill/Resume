@@ -20,10 +20,30 @@ function App() {
   };
 
   const socialLinks = [
-    { icon: '📧', text: 'Pranavpathak332@gmail.com', href: 'mailto:Pranavpathak332@gmail.com' },
-    { icon: '💼', text: 'LinkedIn', href: 'https://linkedin.com', newTab: true },
-    { icon: '💻', text: 'GitHub', href: 'https://github.com', newTab: true },
-    { icon: '📱', text: '+91 6390111311', href: 'tel:+916390111311' },
+    { 
+      icon: '📧', 
+      text: 'Pranavpathak332@gmail.com', 
+      href: 'mailto:Pranavpathak332@gmail.com?subject=Hello%20Pranav&body=Hi%20Pranav,%0D%0A%0D%0AI%20came%20across%20your%20resume%20and%20wanted%20to%20connect...',
+      newTab: true 
+    },
+    { 
+      icon: '💼', 
+      text: 'LinkedIn', 
+      href: 'https://www.linkedin.com/in/pranav-kumar-pathak-7594b9222/', 
+      newTab: true 
+    },
+    { 
+      icon: '💻', 
+      text: 'GitHub', 
+      href: 'https://github.com/Pranavgotnochill', 
+      newTab: true 
+    },
+    { 
+      icon: '📱', 
+      text: '+91 6390111311', 
+      href: 'tel:+916390111311',
+      newTab: false
+    },
   ];
 
   return (
@@ -61,7 +81,7 @@ function App() {
               Hi, I'm <span className="text-yellow-300">Pranav Kumar Pathak</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-indigo-100">
-              Computer Science Student | AI/ML Enthusiast | Full Stack Developer
+              Computer Science Student | AI/ML Enthusiast | SDET 
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {socialLinks.map((link, index) => (
@@ -85,26 +105,52 @@ function App() {
       <div className="container mx-auto px-4 py-12 md:py-16 max-w-5xl">
         {/* About Section */}
         <section id="about" className="mb-16 scroll-mt-24">
-          <h2 className="text-3xl font-bold mb-6 relative inline-block">
+          <h2 className="text-3xl font-bold mb-8 relative inline-block">
             <span className="relative">
               About Me
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></span>
             </span>
           </h2>
-          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300">
-            <p className="text-gray-700 leading-relaxed">
-              I'm a passionate Computer Science student at Vellore Institute of Technology, specializing in AI/ML. 
-              With a strong foundation in full-stack development and a keen interest in machine learning, 
-              I love building intelligent solutions that solve real-world problems.
-            </p>
+          <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-full md:w-2/3 space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-900">Hello, I'm Pranav Kumar Pathak</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  A passionate <span className="text-indigo-600 font-medium">AI/ML Engineer</span> and <span className="text-indigo-600 font-medium"></span> currently pursuing my degree in Computer Science at Vellore Institute of Technology. I specialize in building intelligent systems and scalable applications that bridge the gap between cutting-edge technology and real-world impact.
+                </p>
+                <div className="grid grid-cols-2 gap-4 mt-6">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
+                    <span className="text-gray-700">AI/ML Engineering</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
+                    <span className="text-gray-700">Full-Stack Development</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
+                    <span className="text-gray-700">Computer Vision</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
+                    <span className="text-gray-700">Cloud Technologies</span>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 flex justify-center">
+                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
+                  <span className="text-6xl">👨‍💻</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Education Section */}
         <section id="education" className="mb-16 scroll-mt-24">
-          <h2 className="text-3xl font-bold mb-6 relative inline-block">
+          <h2 className="text-3xl font-bold mb-8 relative inline-block">
             <span className="relative">
-              Education
+              Education & Achievements
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></span>
             </span>
           </h2>
@@ -124,13 +170,22 @@ function App() {
               </p>
             </div>
           </div>
-          <div>
-            <h3 className="text-xl font-medium">
-              Class 12th, Seth Anandram Jaipuria School
-            </h3>
-            <p className="text-sm text-gray-600">
-              Percentage 88.75 • 2021 • Chennai, TN, India
-            </p>
+          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 className="text-xl font-semibold text-gray-900">
+                Class 12th (ICSE)
+              </h3>
+              <span className="inline-block px-3 py-1 text-sm font-semibold text-indigo-700 bg-indigo-100 rounded-full mt-2 md:mt-0">
+                2021
+              </span>
+            </div>
+            <p className="text-indigo-600 font-medium mb-2">Seth Anandram Jaipuria School</p>
+            <div className="flex flex-wrap items-center gap-4 text-gray-600">
+              <span className="flex items-center">
+                <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                Percentage: 88.75%
+              </span>
+            </div>
           </div>
         </section>
 
@@ -168,7 +223,7 @@ function App() {
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
               <h3 className="text-lg font-semibold text-indigo-700 mb-3">Tools & Technologies</h3>
               <div className="flex flex-wrap gap-2">
-                {['Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Selenium', 'PySpark'].map((skill) => (
+                {['Git', 'Docker', 'Jenkins', 'Jira', 'Selenium', 'PySpark'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">
                     {skill}
                   </span>
